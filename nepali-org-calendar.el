@@ -15,30 +15,29 @@
 ;;
 ;;; Commentary:
 ;;
-;;
+;; usage: to use nepali-holidys in your calendar:
+;; (setq calendar-holidays (append nepali-holidays))
 ;;
 ;;; Code:
-
 (eval-when-compile
   (require 'calendar)
   (require 'holidays))
 
 ;; ###autoload
 ;; Holidays only till the end of Chaitra - Will be updated once the new calendar gets released!
-(defvar nepali-calendar-hindu-holidays ( mapcar 'purecopy '((holiday-fixed 1 15 "Makar Shankranti")
-                                                            (holiday-fixed 1 30 "Martyr's Day - Sahid Diwas")
-                                                            (holiday-fixed 2 14 "Saraswati Puja - Shree Panchami")
-                                                            (holiday-fixed 2 19 "Democracy Day - Prajantantra Diwas")
-                                                            (holiday-fixed 3 08 "Maha Shivaratri")
-                                                            (holiday-fixed 3 11 "Gyalp Loshar")
-                                                            (holiday-fixed 3 24 "Holi - Hill Areas")
-                                                            (holiday-fixed 3 25 "Holid - Terai")
-                                                            )))
-
-
 ;; TODO: append other christian holidays
-;; set holidays, just append holidays to the variable holiday-other-holidays
-(setq holiday-other-holidays (append nepali-calendar-hindu-holidays))
+
+;;### autoload
+(defvar nepali-holidays '(
+                          (holiday-float 1 15 "Makar Shankranti")
+                          (holiday-fixed 1 30 "Sahid Diwas")
+                          (holiday-fixed 2 14 "Saraswati Puja")
+                          (holiday-fixed 2 19 "Prajantantra Diwas")
+                          (holiday-fixed 3 8 "Maha Shivaratri")
+                          (holiday-fixed 3 11 "Gyalp Loshar")
+                          (holiday-fixed 3 24 "Holi"))
+  "Other holidays will be updated once the calendar is available"
+  )
 
 (provide 'nepali-org-calendar)
 ;;; nepali-org-calendar.el ends here

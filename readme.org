@@ -1,8 +1,18 @@
-#+TITLE: Org Nepali Calendar
+#+TITLE: Nepali Org Calendar
 #+DESCRIPTION: Nepali Org Calendar
 
-* Nepali Org Calendar
-Nepali holidays package for EMACS org mode.
+Nepali holidays library for EMACS calendar.
 
-** Installation
-TBD
+*** configure
+install the package ~nepali-org-calendar~ or copy paste ~nepali-org-calendar.el~ into your config file and:
+#+begin_src elisp
+(setq calendar-holidays (append nepali-holidays))
+#+end_src
+
+this package only provides the variable ~nepali-holidays~ and you have to append the variable to the calendar-holidays list.
+
+*** usage
+~ M-x calendar ~ -> click on the date and press *r* to see the if it is a holiday in *minibuffer*.
+
+or in org-mode:
+~ C-c . ~ -> opens up the calendar and press *r* again.
