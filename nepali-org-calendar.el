@@ -1,4 +1,4 @@
-;;; nepali-calendar.el --- Holdiays for Nepali Calendar -*- lexical-binding: t; -*-
+;;; nepali-org-calendar.el --- Holdiays for Nepali Calendar -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2024 Sabin Nepal
 ;;
@@ -36,9 +36,9 @@
                                                             )))
 
 
-;; TODO: append other holidays like christian holidays
+;; TODO: append other christian holidays
 ;; set holidays, just append holidays to the variable holiday-other-holidays
 (setq holiday-other-holidays (append nepali-calendar-hindu-holidays))
 
-(provide 'nepali-calendar)
-;;; nepali-calendar.el ends here
+(provide 'nepali-org-calendar)
+;;; nepali-org-calendar.el ends here

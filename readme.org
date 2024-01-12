@@ -1,0 +1,8 @@
+#+TITLE: Org Nepali Calendar
+#+DESCRIPTION: Nepali Org Calendar
+
+* Nepali Org Calendar
+Nepali holidays package for EMACS org mode.
+
+** Installation
+TBD
